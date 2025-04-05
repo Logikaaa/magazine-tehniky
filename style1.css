@@ -1,0 +1,254 @@
+/* Загальні стилі */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 15px 30px;
+}
+
+.logo {
+    height: 60px;
+    border-radius: 50%;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ff6a00;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e25800;
+}
+
+/* Меню */
+nav {
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #333;
+}
+
+/* Головна частина */
+main {
+    padding: 30px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+}
+
+/* Секція товарів */
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.post {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.article-but {
+    margin-top: auto;
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.article-but:hover {
+    background-color: #004f99;
+}
+
+/* Промо-блок */
+.promo {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.promo p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.social {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social img {
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* Зображення на всю ширину */
+.full-image {
+    width: 100%;
+    height: auto;
+    max-height: 270px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+/* Футер */
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.contacts {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-top: 10px;
+}
+
+
+/* --- Адаптивна верстка --- */
+
+/* Для планшетів і мобільних (до 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .button {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Для мобільних (до 600px) */
+@media (max-width: 600px) {
+    .logo {
+        height: 50px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .promo p {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        height: 40px;
+    }
+
+    .article-but {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
